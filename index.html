@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christmas Notes</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Lato&family=Patrick+Hand&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christmas Notes</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Patrick+Hand&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- FULLSCREEN SANTA OVERLAY -->
-<div class="santa-overlay">
-  <div class="window">
-    <div class="santa">
-      <div class="head">
-        <div class="face">
-          <div class="redhat">
-            <div class="whitepart"></div>
-            <div class="redpart"></div>
-            <div class="hatball"></div>
+  <!-- FULLSCREEN SANTA OVERLAY -->
+  <div class="santa-overlay" id="santaOverlay">
+    <div class="window">
+      <div class="santa">
+        <div class="head">
+          <div class="face">
+            <div class="redhat">
+              <div class="whitepart"></div>
+              <div class="redpart"></div>
+              <div class="hatball"></div>
+            </div>
+            <div class="eyes"></div>
+            <div class="beard">
+              <div class="nouse"></div>
+              <div class="mouth"></div>
+            </div>
           </div>
-          <div class="eyes"></div>
-          <div class="beard">
-            <div class="nouse"></div>
-            <div class="mouth"></div>
-          </div>
+          <div class="ears"></div>
         </div>
-        <div class="ears"></div>
-      </div>
-      <div class="body"></div>
-    </div>
-  </div>
-  <div class="message">
-    <h1>Merry Christmas!</h1>
-    <h2>Click anywhere to reveal your notes!</h2>
-  </div>
-</div>
-
-<!-- NOTES CONTAINER -->
-<div class="container">
-  <section class="hero-card">
-    <div class="new-note-card">
-      <div class="pin"></div>
-      <input type="text" class="note-title" placeholder="Letter sender..." />
-      <textarea placeholder="Write your note here..."></textarea>
-      <div class="actions">
-        <button class="btn save">Post</button>
-        <button class="btn cancel">Cancel</button>
+        <div class="body"></div>
       </div>
     </div>
-  </section>
 
-  <ul class="sticky-notes"></ul>
-</div>
+    <div class="message">
+      <h1>Merry Christmas!</h1>
+      <h2>Click anywhere to reveal your notes!</h2>
+    </div>
+  </div>
 
-<!-- Firebase + Script -->
-<script type="module" src="script.js"></script>
+  <!-- NOTES CONTAINER -->
+  <div class="container">
+
+    <section class="hero-card">
+      <div class="new-note-card">
+        <div class="pin"></div>
+
+        <input
+          type="text"
+          class="note-title"
+          placeholder="Letter sender..."
+        />
+
+        <textarea placeholder="Write your note here..."></textarea>
+
+        <div class="actions">
+          <button class="btn save">Post</button>
+          <button class="btn cancel">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <ul class="sticky-notes"></ul>
+  </div>
+
+  <!-- MAIN SCRIPT (ES MODULE REQUIRED FOR FIREBASE) -->
+  <script type="module" src="./script.js"></script>
 
 </body>
 </html>
